@@ -21,7 +21,7 @@ def crear():
         file = form.imagen.data
         file.save(os.path.abspath(os.getcwd() + '/app/productos/imagenes/' + p.imagen))
         flash("registro exitoso")
-        return redirect("productos/listar")
+        return redirect("/productos/listar")
     return render_template('new.html', form = form)
 
 @productos.route('/listar')

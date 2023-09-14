@@ -12,6 +12,7 @@
         </div>
     {% endfor %}
 
+
     <h1>Lista de productos</h1>
     <table class="table table-bordered">
         <thead>
@@ -48,5 +49,16 @@
              
             {% endfor %}
         </tbody>
+  
     </table>
+          
+    {% if current_user.is_authenticated %}
+            <li>
+                <a href="/auth/logout">Cerrar Sesión</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/auth/logout">Iniciar Sesión</a>
+            </li>
+            {% endif %}
 {% endblock %}

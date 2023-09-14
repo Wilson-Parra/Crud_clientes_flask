@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm 
 from wtforms import StringField ,SubmitField,PasswordField
 from wtforms.validators import InputRequired, Email
-from wtforms import PasswordField, StringField, validators, ValidationError
+from wtforms import PasswordField, StringField, validators
 
 class ClientForm(FlaskForm):
 
